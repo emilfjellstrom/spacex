@@ -130,10 +130,7 @@ function TimeAndLocation({ launch }) {
             fontSize="md"
             placement="top"
           >
-            {formatLocalDateTime(
-              launch.launch_date_local,
-              launch.launch_date_utc
-            )}
+            {formatLocalDateTime(launch.launch_date_local)}
           </Tooltip>
         </StatNumber>
         <StatHelpText>{timeAgo(launch.launch_date_utc)}</StatHelpText>

@@ -52,11 +52,11 @@ const timeZones = {
  * {@link https://developers.google.com/maps/documentation/timezone/get-started#json developers.google.com}.
  */
 
-export function formatLocalDateTime(timestampLocal, timestampUTC) {
+export function formatLocalDateTime(timestampLocal) {
   const regex = new RegExp("Z");
   const dateLocal = new Date(timestampLocal);
   let zone = "UTC";
-
+  // To check if the local timestamp has a timezone
   if (!regex.test(timestampLocal)) {
     const offset = timestampLocal.substring(timestampLocal.length - 6);
 
